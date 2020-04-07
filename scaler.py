@@ -1,8 +1,12 @@
-from typing import Dict, Union, Callable, Iterable
+from typing import (Dict, Union, Callable, Iterable)
 import numpy as np
 
 
-class FeatureScaler:
+class FeatureTransformer:
+    """
+    Feature Transformer.
+
+    """
     FEATURES_LEN = 257
 
     def __init__(self, data_dir: str='data', test_file_name: str='test.tsv',
@@ -212,8 +216,8 @@ class FeatureScaler:
 
 
 if __name__ == "__main__":
-    f_scaler = FeatureScaler()
-    f_scaler.fit()
+    f_scaler = FeatureTransformer()
 
+    f_scaler.fit()
     f_scaler.transform()
 

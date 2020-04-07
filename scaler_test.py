@@ -1,5 +1,5 @@
 import unittest
-from scaler import FeatureScaler
+from scaler import FeatureTransformer
 
 
 class TestSum(unittest.TestCase):
@@ -10,8 +10,8 @@ class TestSum(unittest.TestCase):
         test_file = 'test_test.tsv'
         outfile = 'test_test_proc.tsv'
 
-        scaler = FeatureScaler(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
-                               output_file_name=outfile)
+        scaler = FeatureTransformer(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
+                                    output_file_name=outfile)
 
         scaler.FEATURES_LEN = 5
         scaler.fit()
@@ -55,8 +55,8 @@ class TestSum(unittest.TestCase):
         test_file = 'test_corrupted.tsv'
         outfile = 'test_test_proc.tsv'
 
-        scaler = FeatureScaler(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
-                               output_file_name=outfile)
+        scaler = FeatureTransformer(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
+                                    output_file_name=outfile)
 
         scaler.FEATURES_LEN = 5
 
@@ -73,8 +73,8 @@ class TestSum(unittest.TestCase):
         test_file = 'test_corrupted.tsv'
         outfile = 'test_test_proc.tsv'
 
-        scaler = FeatureScaler(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
-                               output_file_name=outfile)
+        scaler = FeatureTransformer(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
+                                    output_file_name=outfile)
 
         scaler.FEATURES_LEN = 5
 
@@ -89,8 +89,8 @@ class TestSum(unittest.TestCase):
         test_file = 'test_test.tsv'
         outfile = 'test_test_proc.tsv'
 
-        scaler = FeatureScaler(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
-                               output_file_name=outfile)
+        scaler = FeatureTransformer(data_dir='data_test', test_file_name=test_file, train_file_name=train_file,
+                                    output_file_name=outfile)
 
         scaler.FEATURES_LEN = 5
 
