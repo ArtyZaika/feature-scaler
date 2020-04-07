@@ -1,5 +1,5 @@
 import unittest
-from scaler import FeatureTransformer
+from feature_transformer import FeatureTransformer
 
 
 class TestSum(unittest.TestCase):
