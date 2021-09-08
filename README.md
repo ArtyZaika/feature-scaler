@@ -14,13 +14,12 @@ https://drive.google.com/drive/folders/1lCVt_UtxwfLyu16rgmQm-ej68XztFEtN
 В качестве тестирования к модулю должен быть прикреплен скрипт, который генерирует файл test_proc.tsv который содержит следующий набор колонок (признаков) для каждой вакансии из test.tsv: 
 1. id_job - (integer) идентификатор вакансии (размерность : 1); 
 2. feature_2_stand_{i} - (double) результат стандартизации (z-score нормализация) входного признака feature_2_{i} (См. Входные данные(*)) (размерность : 256); 
-  a. Ссылка на определение стандартизации : 
-    i. https://ru.wikipedia.org/wiki/Z-%D0%BE%D1%86%D0%B 5%D0%BD%D0%BA%D0%B0 
-    ii. https://en.wikipedia.org/wiki/Feature_scaling b. Для проведения этой операции требуется оценить две статистики для каждой колонки feature_2_{i} на данных из файла train.tsv: 
-    i. mean(feature_2_{i}) - среднее значение по всем вакансиям для признака feature_2_{i}; 
-    ii. std(feature_2_{i}) - среднеквадратическое 
-отклонение по всем вакансиям для признака 
-feature_2_{i}; 
+  - Ссылка на определение стандартизации : 
+    1. https://ru.wikipedia.org/wiki/Z-%D0%BE%D1%86%D0%B 5%D0%BD%D0%BA%D0%B0 
+    2. https://en.wikipedia.org/wiki/Feature_scaling 
+  - Для проведения этой операции требуется оценить две статистики для каждой колонки feature_2_{i} на данных из файла train.tsv: 
+    1. mean(feature_2_{i}) - среднее значение по всем вакансиям для признака feature_2_{i}; 
+    2. std(feature_2_{i}) - среднеквадратическое отклонение по всем вакансиям для признака feature_2_{i}; 
 3. max_feature_2_index - (integer) индекс i максимального значения признака feature_2_{i} для данной вакансии (размерность : 1); 
 4. max_feature_2_abs_mean_diff - (double) - абсолютное отклонение признака с индексом max_feature_2_index от его среднего значения mean(feature_2_{max_feature_2_index}) (размерность : 1);
 
